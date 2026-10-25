@@ -3,8 +3,11 @@ package com.example.el_combat_arena;
 import java.util.ArrayList;
 
 public class Habilidades {
-    Habilidades[0] = estamina -5;
-    Habilidades[1] = estamina -10;
-    Habilidades[2] = estamina -10;
-    Habilidades[3] = estamina -10;
+    int[] custo_de_estamina = {5, 10, 10, 10};
+
+    String nome_habilidade = "";
+    float stum = 0;
+    float dano = 0;
+    float buff = 0;
+    float def = 0;
 }
