@@ -10,4 +10,6 @@ public class Habilidades {
     float dano = 0;
     float buff = 0;
     float def = 0;
+
+
 }

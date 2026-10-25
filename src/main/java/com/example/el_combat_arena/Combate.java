@@ -5,6 +5,8 @@ public class Combate {
     Personas_Valorant Astra = new Personas_Valorant();
     Personas_Valorant Vyse = new Personas_Valorant();
 
+    int distancia = 40;
+
     void nomePersonas() {
         Astra.nome = "Astra";
         Vyse.nome = "Vyse";
@@ -41,10 +43,43 @@ public class Combate {
 
     }
 
+    void aproximaPersonas(Personas_Valorant persona) {
+        distancia -= persona.velocidade;
+    }
+
+    void distanciarPersonas(Personas_Valorant persona) {
+        distancia += persona.velocidade;
+    }
+
+    // Habilidades
+
+    //void habilidadePersonas() {
+     //   Astra.habilidades(0) = stum = 1;
+    //}
+
     void mostrarPersonas() {
 
     System.out.println(Astra.nome);
     System.out.println(Vyse.nome);
 
+    }
+
+    void testarMovimento() {
+        System.out.println("Distância inicial: " + distancia);
+
+        aproximaPersonas(Astra);
+        System.out.println("Após Astra se aproximar: " + distancia);
+
+        aproximaPersonas(Vyse);
+        System.out.println("Após Vyse se aproximar: " + distancia);
+    }
+
+    public static void main(String[] args) {
+        Combate combate = new Combate();
+
+        combate.nomePersonas();
+        combate.velocidadePersonas();
+
+        combate.testarMovimento();
     }
 }
